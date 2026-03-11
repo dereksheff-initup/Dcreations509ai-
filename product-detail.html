@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-detail">
+        <h1>Product Title</h1>
+        <img src="product-image.jpg" alt="Product Image">
+        <p><strong>Price:</strong> $XX.XX</p>
+        <div class="description">
+            <h2>Description</h2>
+            <p>Detailed product description goes here.</p>
+        </div>
+        <div class="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <p><strong>User:</strong> Review content here.</p>
+            </div>
+            <!-- Add more reviews as needed -->
+        </div>
+        <div class="quantity-selector">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+    <script>
+        document.getElementById('add-to-cart').addEventListener('click', function() {
+            var quantity = document.getElementById('quantity').value;
+            alert('Added ' + quantity + ' item(s) to the cart!');
+        });
+    </script>
+</body>
+</html>
